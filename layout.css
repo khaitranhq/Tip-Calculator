@@ -56,3 +56,11 @@ button{
   font-weight: 900;
   background-color: #990033;
 }
+
+#result::before{
+  content: "Tip Amount";
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}

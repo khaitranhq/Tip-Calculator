@@ -10,10 +10,17 @@ buttonCalc.addEventListener('mouseout', mouseout = function(){
 })
 
 var showTip = function(tip){
-    var ansString = "TIP AMOUNT $" + tip;
+    result.style.display = "block";
+
     var numPeople = document.getElementById('numPeople').value;
-    if (numPeople > 1)
-        ansString += " each";
+    console.log(numPeople);
+    if (numPeople > 1) 
+        document.getElementById('each').style.display = "inline";
+    else    
+        document.getElementById('each').style.display = "none";
+    tipElement = document.getElementById('tip');
+    tipElement.innerHTML = tip;
+
     result.innerText = ansString;
 }
 
@@ -27,8 +34,13 @@ var calculate = function(){
     else
         if (numPeople == 0)
             showTip(0);
-        else 
-            showTip(billAmt * evaluation / numPeople);
+        else {
+            var tip = billAmt * evaluation / numPeople;
+            tip = tip.toFixed(2);
+            showTip(tip);
+        }
 }
 
+result.style.display = "none";
+document.getElementById('each').style.display = "none";
 buttonCalc.addEventListener('click', calculate);

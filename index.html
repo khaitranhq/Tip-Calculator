@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tip Calculator</title>
-    </head>
 
-    <body>
-        <h1>Dfaasdfasdf</h1>
-    </body>
+<head>
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>TIP CALCULATOR</h1>
+        </section>
+
+        <section>
+            <p>How much was your bill?</p>
+            $ <input type="text">
+
+            <p>How was your service?</p>
+            <select name="evaluation" id="evaluation">
+                <option value="default">-- Choose an option --</option>
+                <option value="30%">30% - Outstanding</option>
+                <option value="20%">20% - Good</option>
+                <option value="15%">15% - It was OK</option>
+                <option value="10%">10% - Bad</option>
+                <option value="5%">5% - Terrible</option>
+            </select>
+
+            <p>How many people are sharing the bill?</p>
+            <input type="text"> people
+
+            <button id = "buttonCalc">CALCULATE</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
 </html>

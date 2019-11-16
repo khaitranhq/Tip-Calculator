@@ -23,7 +23,7 @@ var calculate = function(){
     var numPeople = document.getElementById('numPeople').value;
     console.log(evaluation);
     if (billAmt == "" || evaluation == "0")
-        alert("Please select evaluated level and enter Bill Amount!!!");
+        alert("Please select evaluated level and enter bill amount!!!");
     else
         if (numPeople == 0)
             showTip(0);
